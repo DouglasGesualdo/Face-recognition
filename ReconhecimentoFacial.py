@@ -7,16 +7,16 @@ video_capture = cv2.VideoCapture(0)
 
 # Carregando Imagens e reconhecendo as mesmas
 
-douglas_image = face_recognition.load_image_file("douglas.jpeg")
-douglas_face_encoding = face_recognition.face_encodings(douglas_image)[0]
+img1_image = face_recognition.load_image_file("img1.jpeg")
+img1_face_encoding = face_recognition.face_encodings(img1_image)[0]
 
-lucas_image = face_recognition.load_image_file("lucas.jpeg")
-lucas_face_encoding = face_recognition.face_encodings(lucas_image)[0]
+img2_image = face_recognition.load_image_file("img2.jpeg")
+img2_face_encoding = face_recognition.face_encodings(img2_image)[0]
 
 #criando matrizes com os rostos conhecidos e nomeando
 known_face_encodings = [
-    douglas_face_encoding,
-    lucas_face_encoding
+    img1_face_encoding,
+    img2_face_encoding
 ]
 known_face_names = [
     "Douglas Gesualdo",
